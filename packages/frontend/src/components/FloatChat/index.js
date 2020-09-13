@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import Chat from '../Chat';
+// import Chat from '../Chat';
 
 import { ReactComponent as BotImg } from '../../assets/bot.svg';
 import './styles.css';
 
-function FloatChat({ onClick, onComplete }) {
+function FloatChat({ onClick }) {
   const [isOpened, setOpened] = useState(false);
 
   function handleOnClick() {
@@ -18,9 +18,11 @@ function FloatChat({ onClick, onComplete }) {
 
   return (
     <div className="floatchat-container">
-      <div className={`chat ${isOpened ? 'is-visible' : ''}`}>
-        <Chat onComplete={onComplete} />
-      </div>
+      <iframe
+        className={`chat ${isOpened ? 'is-visible' : ''}`}
+        title="mountbot"
+        src="https://d2vcceer20pg9.cloudfront.net/index.html"
+      />
       <button className="float-bottom" type="button" onClick={handleOnClick}>
         <BotImg />
       </button>
