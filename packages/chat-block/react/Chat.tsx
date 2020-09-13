@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-interface ChatProps { }
+import { ReactComponent as BotImg } from '../assets/bot.svg';
+import './styles.css';
 
-const Chat: StorefrontFunctionComponent<ChatProps> = ({ }) => {
+interface ChatProps {}
+
+const Chat: StorefrontFunctionComponent<ChatProps> = () => {
+  const [isOpened, setOpened] = useState(false);
+
+  function handleOnClick() {
+    setOpened(state => !state);
+  }
+
   return (
-  <>
-    <iframe src="https://d2vcceer20pg9.cloudfront.net/index.html" width="500px" height="500px"></iframe>
-  </>
-  )
+    <div className="floatchat-container">
+      <div className={`chat ${isOpened ? 'is-visible' : ''}`}>
+        <iframe src="https://d2vcceer20pg9.cloudfront.net/index.html"
+          width="500px"
+          height="500px" />
+      </div>
+    
+      <button className="float-bottom" type="button" onClick={handleOnClick}>
+        <BotImg />
+      </button>
+    </div>
+  );
 }
 
 Chat.schema = {
