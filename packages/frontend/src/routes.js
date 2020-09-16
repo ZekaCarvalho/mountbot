@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import WithFloat from './pages/WithFloat';
 
 function Routes() {
@@ -12,7 +12,7 @@ function Routes() {
       </Route>
 
       <Route path="/">
-        <Home />
+        <WithFloat />
       </Route>
     </Switch>
   );

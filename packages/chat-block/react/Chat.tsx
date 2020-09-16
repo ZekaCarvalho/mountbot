@@ -15,11 +15,11 @@ const Chat: StorefrontFunctionComponent<ChatProps> = () => {
   return (
     <div className="floatchat-container">
       <div className={`chat ${isOpened ? 'is-visible' : ''}`}>
-        <iframe src="https://d2vcceer20pg9.cloudfront.net/index.html"
+        <iframe src="https://d1ynr93g6z78ed.cloudfront.net/index.html"
           width="500px"
           height="500px" />
       </div>
-    
+
       <button className="float-bottom" type="button" onClick={handleOnClick}>
         <BotImg />
       </button>

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// import Chat from '../Chat';
-
 import { ReactComponent as BotImg } from '../../assets/bot.svg';
 import './styles.css';
 
@@ -21,7 +19,7 @@ function FloatChat({ onClick }) {
       <iframe
         className={`chat ${isOpened ? 'is-visible' : ''}`}
         title="mountbot"
-        src="https://d2vcceer20pg9.cloudfront.net/index.html"
+        src="https://d1ynr93g6z78ed.cloudfront.net/index.html"
       />
       <button className="float-bottom" type="button" onClick={handleOnClick}>
         <BotImg />
